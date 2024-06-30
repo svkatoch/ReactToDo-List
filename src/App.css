@@ -1,3 +1,4 @@
+/* Universal styles */
 * {
   box-sizing: border-box;
   background-color: rgb(52,152,219);
@@ -32,13 +33,29 @@ header {
   margin-top: 60px;
 }
 
+/* Base styles for the container */
 .container {
-  width: 50%;
+  width: 90%;
+  max-width: 500px;
   background: #fff;
   margin: 0 auto;
   border-radius: 4px;
   padding: 30px;
-  box-shadow: 0 0 18px -5px rgba(0,0,0,.25);
+  box-shadow: 0 0 18px -5px rgba(0, 0, 0, .25);
+}
+
+/* Adjustments for screens larger than 768px */
+@media (min-width: 768px) {
+  .container {
+    width: 70%;
+  }
+}
+
+/* Adjustments for screens larger than 1024px */
+@media (min-width: 1024px) {
+  .container {
+    width: 50%;
+  }
 }
 
 form {
@@ -51,8 +68,8 @@ input {
   border: 2px solid transparent;
   width: 100%;
   border-radius: 4px;
-  box-shadow: 0 0 18px -5px rgba(0,0,0,.25);
-  font-size: 22px;
+  box-shadow: 0 0 18px -5px rgba(0, 0, 0, .25);
+  font-size: 100%;
   transition: all .2s;
   background-color: aqua;
 }
@@ -92,11 +109,11 @@ form button {
 }
 
 li.not-found {
-    text-align: center;
-    font-weight: 900;
-    text-transform: uppercase;
-    background: #EF5350;
-    color: #fff;
+  text-align: center;
+  font-weight: 900;
+  text-transform: uppercase;
+  background: #EF5350;
+  color: #fff;
 }
 
 .item-lists li:last-child {
@@ -104,7 +121,7 @@ li.not-found {
 }
 
 .item-lists li span {
-  width: 50%px;
+  width: 100%;
   height: 20px;
   font-size: 18px;
   text-align: left;
@@ -137,7 +154,6 @@ li.not-found {
 }
 
 .footer-area {
-    padding: 50px 0;
-    text-align: center;
-    
+  padding: 50px 0;
+  text-align: center;
 }

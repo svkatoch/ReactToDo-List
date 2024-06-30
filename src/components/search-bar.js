@@ -21,7 +21,7 @@ export default class SearchBar extends Component {
     const { data, isError } = this.state;
     return (
       <form onSubmit={this.formOnSubmit} className="search-form">
-        <input className={isError ? "error" : "okay"} value={data} onChange={({target: {value}}) => this.setState({data: value, isError:false})} placeholder={isError?"Write something first":"What do you want to do?"}/>
+        <input className={isError ? "error" : "okay"} value={data} onChange={({target: {value}}) => this.setState({data: value, isError:false})} placeholder={isError?"Write something first":"Enter Tasks"}/>
         <button className="btn btn-submit" type="submit">+</button>
       </form>
     )
